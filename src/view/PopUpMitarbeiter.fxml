@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="545.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="view.controller.ControllerPersonPopUp">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="14.0" layoutY="14.0" text="Mitarbeiter erstellen / bearbeiten">
+      <font>
+        <Font name="Arial" size="20.0" />
+      </font>
+    </Label>
+    <GridPane gridLinesVisible="false" layoutX="14.0" layoutY="67.0" prefHeight="321.0" prefWidth="421.9999000000025">
+      <children>
+        <Label text="Personalnummer:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Vorname:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Nachname:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="Straße:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label text="Hausnummer:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Label text="PLZ:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Label text="Wohnort:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Label text="Geburtstag:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <Label text="Geburtsort:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+        <Label text="Geburtsland:" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+        <Label text="SV-Nummer:" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+        <Label text="Nationalität:" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+        <Label text="Sonst. Arbeit:" GridPane.columnIndex="0" GridPane.rowIndex="15" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="16" />
+        <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+        <Label text="Sonstige Infos:" GridPane.columnIndex="0" GridPane.rowIndex="17" />
+        <TextField fx:id="fieldPersNr" prefWidth="200.0" promptText="Personalnummer" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="fieldFirstName" prefWidth="200.0" promptText="Vorname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="fieldLastName" prefWidth="200.0" promptText="Nachname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="fieldStreet" prefWidth="200.0" promptText="Straße" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="fieldStreetNumber" prefWidth="200.0" promptText="Hausnummer" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="fieldZipCode" prefWidth="200.0" promptText="Postleitzahl" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField fx:id="fieldTown" prefWidth="200.0" promptText="Wohnort" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <TextField fx:id="fieldBirthDate" prefWidth="200.0" promptText="TT.MM.YYYY" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <TextField fx:id="fieldBirthPlace" prefWidth="200.0" promptText="Geburtsort" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <TextField fx:id="fieldBirthCountry" prefWidth="200.0" promptText="Geburtsland" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+        <TextField fx:id="fieldSvNr" prefWidth="200.0" promptText="Sozialversicherung" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+        <TextField fx:id="fieldNationality" prefWidth="200.0" promptText="Staatsbürgerschaft" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+        <TextField fx:id="fieldCurrWork" prefWidth="200.0" promptText="Sonstige Beschäftigung" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.0" minWidth="10.0" prefWidth="130.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="358.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="8.0" minHeight="8.0" prefHeight="8.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="8.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="21.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="8.0" minHeight="8.0" prefHeight="8.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="8.0" minHeight="8.0" prefHeight="8.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <TextArea fx:id="areaAddInfo" editable="true" layoutX="14.0" layoutY="380.0" prefHeight="109.0" prefWidth="422.0" promptText="Telefon, Email, etc." wrapText="true" />
+    <HBox id="HBox" alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+      <children>
+        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOKClicked" prefHeight="25.0" prefWidth="80.0" text="OK" />
+        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCancelClicked" prefHeight="25.0" prefWidth="80.0" text="Abbruch" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>

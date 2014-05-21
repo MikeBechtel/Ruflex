@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="stammPane" prefHeight="550.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="view.controller.ControllerStammdaten">
+  <!-- TODO Add Nodes -->
+  <children>
+    <SplitPane disable="false" dividerPositions="0.5" focusTraversable="true" orientation="VERTICAL" prefHeight="550.0" prefWidth="800.0" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <TableView fx:id="stammdatenTable" prefHeight="271.0" prefWidth="798.0" HBox.hgrow="ALWAYS">
+                  <columns>
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="75.0" text="Pers.-Nr." fx:id="persNr" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Name" fx:id="lastName" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Vorname" fx:id="firstName" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="201.0" text="Straße" fx:id="street" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="60.0" text="Haus Nr." fx:id="streetNumber" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="PLZ" fx:id="zipCode" />
+                    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Wohnort" fx:id="town" />
+                  </columns>
+                </TableView>
+              </children>
+              <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+            </HBox>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" spacing="10.0" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="24.0">
+              <children>
+                <Button mnemonicParsing="false" onAction="#handleNewButton" prefHeight="25.0" prefWidth="80.0" text="Neu" />
+                <Button fx:id="buttonEdit" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="25.0" prefWidth="80.0" text="Bearbeiten" />
+                <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="25.0" prefWidth="80.0" text="Löschen" />
+              </children>
+            </HBox>
+            <GridPane id="GridPane" layoutX="14.0" layoutY="50.0" prefHeight="197.0" prefWidth="353.0">
+              <children>
+                <Label text="Vorname:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Nachname:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Separator prefWidth="353.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Straße:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Hausnummer:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label text="PLZ" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label text="Wohnort:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <Label text="Geburtstag:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                <Label text="Geburtsort:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+                <Label text="Geburtsland:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+                <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Label fx:id="labelFirstName" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label fx:id="labelLastName" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="labelStreet" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="labelStreetNumber" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="labelZipCode" text="" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label fx:id="labelTown" text="" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label fx:id="labelBirthDate" text="" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <Label fx:id="labelBirthPlace" text="" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                <Label fx:id="labelBirthCountry" text="" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="97.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="256.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="8.0" minHeight="4.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="8.0" minHeight="4.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Label layoutX="13.0" layoutY="14.0" text="Details">
+              <font>
+                <Font name="Arial" size="20.0" />
+              </font>
+            </Label>
+            <GridPane id="GridPane" layoutX="399.0" layoutY="13.0" prefHeight="75.0" prefWidth="385.0">
+              <children>
+                <Label text="SV-Nr:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Nationalität:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Sonst. Arbeit:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label text="Sonstige Infos:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="labelSvNr" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label fx:id="labelNationality" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="labelCurrWork" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="95.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="10.0" prefWidth="290.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="20.0" minHeight="8.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" percentHeight="-1.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="8.0" minHeight="4.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <TextArea fx:id="areaAddInfo" disable="false" editable="false" layoutX="399.0" layoutY="92.0" prefHeight="116.0" prefWidth="375.0" wrapText="true" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
